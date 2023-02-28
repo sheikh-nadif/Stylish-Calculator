@@ -27,11 +27,22 @@ body .calculator .buttons{
     display: grid;
 }
 
+body .calculator .count #count, body .calculator .count #max{
+    position: absolute;
+    z-index: 500;
+    margin: 10px;
+    color: #b8b6b6;
+}
+body .calculator .count #count{
+    margin-left: 80px;
+}
+
 body .calculator .buttons #value{
     position: relative;
     grid-column: span 4;
     user-select: none;
-    overflow: none;
+    overflow: hidden;
+    height: 100px;
     width: 100%;
     text-align: end;
     color: #5166d6;
@@ -43,6 +54,8 @@ body .calculator .buttons #value{
     padding: 0 20px;
     font-size: 2em;
     font-weight: 500;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .calculator .buttons span{
